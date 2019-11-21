@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css">
+    <title></title>
+</head>
+<body>
+    
+    <form class= "form" name="form">
+        <input type="text" placeholder="Введите имя" name="name">
+    </form>
+    
+    <div class="male">male</div>
+    <div class="female">female</div>
+    <div class="result"></div>
+
+    <script>
+        let elName = form.elements.name;
+        let elMale = document.querySelector('.male');
+        let elFemale = document.querySelector('.female');
+        let elResult = document.querySelector('.result');
+        elMale.addEventListener('click', function(){
+            if (elName.value === '') {
+                elResult.innerHTML = `Введите имя`;
+            } else {
+                elResult.innerHTML = `${elName.value}, купи тачку`;
+            }
+        });
+        elFemale.addEventListener('click', function(){
+            if (elName.value === '') {
+                elResult.innerHTML = `Введите имя`;
+            } else {
+                elResult.innerHTML = `${elName.value}, жуй жвачку`;
+            }
+        });
+    </script>
+</body>
+</html>

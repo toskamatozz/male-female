@@ -1,0 +1,62 @@
+*   {
+    margin: 0;
+    padding: 0;
+}
+body    {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "form form"
+                         "male female"
+                         "result result";
+    background: lightcyan;
+    color: white;
+    font-family: Verdana;
+    font-size: 22px;
+    user-select: none;
+}
+.form   {
+    grid-area: form;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input  {
+        height: 50px;
+        width: 296px;
+        padding-left: 20px;
+        color: gray;
+    }
+}
+.male    {
+    grid-area: male;
+    justify-self: end;
+    height: 100px;
+    width: 150px;
+    background: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.female    {
+    grid-area: female;
+    height: 100px;
+    width: 150px;
+    background: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.result    {
+    grid-area: result;
+    margin: 0 auto;
+    height: 100px;
+    width: 320px;
+    background: yellowgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
